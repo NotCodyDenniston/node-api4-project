@@ -4,6 +4,12 @@ const server = express()
 
 server.use(express.json())
 
+server.get('/', (req,res) => {
+    res.status(200).json({
+        message:"Here is the landing page"
+    })
+})
+
 server.get('/api/users', (req,res) => {
     res.status(200).json({
         message:"Here is the list of users"
